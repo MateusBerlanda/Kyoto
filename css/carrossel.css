@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+    
+}
+
+.carousel-item {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.fundo-vermelho {
+    background-image: url('../img/fundo-vermelho.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fundo-branco {
+    background-image: url('../img/fundo-branco.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.itens-carrossel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.texts-carrossel {
+    max-width: 50%;
+    padding-left: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.texts-carrossel h1 {
+    font-size: 60px;
+}
+
+.h1-fvermelho {
+    color: #fff;
+}
+
+.h1-fbranco {
+    color: #B10203;
+}
+
+.texts-carrossel p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.p-fvermelho {
+    color: #fff;
+}
+
+.p-fbranco {
+    color: #B10203;
+}
+
+.btn-carrossel-vermelho {
+    padding: 15px;
+    font-size: 16px;
+    background-color: #fff;
+    border-radius: 30px;
+    width: 250px;
+    font-weight: 600;
+    color: #B10203;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 60px;
+}
+
+.btn-carrossel-branco {
+    padding: 15px;
+    font-size: 16px;
+    background-color: #B10203;
+    border-radius: 30px;
+    width: 250px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 60px;
+}
+
+.img-carrossel1 {
+    position: absolute;
+    bottom: -40px;
+    right: 120px;
+    width: 350px;
+    height: auto;
+}
+
+.img-carrossel2 {
+    position: absolute;
+    top: 50%;
+    right: -80px;
+    translate: 0 -50%;
+    width: 400px;
+    height: auto;
+}
+
+.img-carrossel3 {
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    width: 400px;
+    height: auto;
+}
+
+.img-carrossel4 {
+    width: 450px;
+    height: auto;
+}
+
+
+@keyframes texto-sobe {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes img-de-baixo {
+    from {
+        transform: translateY(120%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes img-da-direita {
+    from {
+        transform: translateX(120%) rotate(15deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0) rotate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes img-do-canto {
+    from {
+        transform: translate(120%, -120%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes img-cresce {
+    from {
+        transform: scale(0.3) rotate(-10deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1) rotate(0);
+        opacity: 1;
+    }
+}
+
+
+.carousel-item.active .texts-carrossel h1 {
+    animation: texto-sobe 0.7s ease-out 0.3s both;
+}
+
+.carousel-item.active .texts-carrossel p {
+    animation: texto-sobe 0.7s ease-out 0.5s both;
+}
+
+.carousel-item.active .texts-carrossel button {
+    animation: texto-sobe 0.7s ease-out 0.7s both;
+}
+
+
+.carousel-item.active .img-carrossel1 {
+    animation: img-de-baixo 0.9s ease-out 0.4s both;
+}
+
+.carousel-item.active .img-carrossel2 {
+    animation: img-da-direita 0.9s ease-out 0.4s both;
+}
+
+.carousel-item.active .img-carrossel3 {
+    animation: img-do-canto 0.9s ease-out 0.4s both;
+}
+
+.carousel-item.active .img-carrossel4 {
+    animation: img-cresce 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s both;
+}
