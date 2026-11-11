@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #B10203;
+    background-image: url('../img/detalhe-header-cliente.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    background-color: #B10203;
+    padding: 5px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #B10203;
+    padding: 5px 10px;
+}
+
+.btn-mesa{
+    padding: 10px 20px;
+    color: #B10203; 
+    background-color: #fff; 
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+}

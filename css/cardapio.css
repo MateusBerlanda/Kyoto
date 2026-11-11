@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-items: center;
+    margin: 50px 0;
+}
+
+.produto-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 730px;
+    padding: 20px;
+    height: 300px;
+    background: #fff;
+    border: 1px solid #c12627;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.18);
+}
+
+.produto-imagem {
+    position: relative;
+}
+
+.layers {
+    width: 20px;
+}
+
+.imagem-produto {
+    object-fit: cover;
+    width: 300px;
+    height: 240px;
+    border-radius: 30px;
+}
+
+.quantidade {
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: auto;
+    background: #c12627;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 5px 15px;
+
+    p {
+        margin: 0;
+        font-size: 20px;
+    }
+}
+
+.produto-info {
+    flex: 1;
+    min-width: 0;
+
+    h2 {
+        color: #c12627;
+        font-size: 32px;
+        margin: 0 0 12px;
+    }
+
+    p {
+        color: #222;
+        font-size: 15px;
+        max-width: 450px;
+    }
+}
+
+.produto-acoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 50px;
+
+    strong {
+        font-size: 30px;
+        color: #000;
+        white-space: nowrap;
+    }
+
+    button {
+        background: #bd0000;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        width: auto;
+    }
+}
