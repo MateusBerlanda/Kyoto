@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #B10203;
+    background-image: url('../img/detalhe-header-admin.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    padding: 5px;
+}

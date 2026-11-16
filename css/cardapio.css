@@ -5,6 +5,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+body {
+    background-color: #F9F0E9;
+}
+
 .produtos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

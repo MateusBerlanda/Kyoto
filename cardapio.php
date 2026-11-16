@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardápio - Kyoto</title>
     <link rel="stylesheet" href="../css/cardapio.css">
-    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/header-cliente.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <?php include "./view/header.php" ?>
+    <?php include "./view/header-cliente.php" ?>
 
     <div class="produtos">
         <?php foreach ($produtos as $produto): ?>
