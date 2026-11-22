@@ -51,9 +51,9 @@
 
     <!-- PRODUTOS -->
 
-    <div class="produtos">
+    <div class="produtos" id="lista-produtos">
         <div class="produto">
-            <img id="img-produto" src="https://placehold.co/200x150" alt="Imagem do Produto">
+            <img src="https://placehold.co/200x150" alt="Imagem do Produto">
 
             <div class="info-produto">
                 <div class="textos-produto">
@@ -61,7 +61,7 @@
                 </div>
 
                 <div class="btns-produto">
-                    <button class="btn-icone" aria-label="Editar produto" id="btn-editar-produto">
+                    <button class="btn-icone btn-editar" aria-label="Editar produto" id="btn-editar">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true">
                             <path
                                 d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z" />
@@ -79,9 +79,11 @@
         </div>
     </div>
 
+    <!-- MODAL ADICIONAR -->
+
     <div class="modal-overlay" id="modal-add">
-        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
-            <h2 id="modal-titulo" class="sr-only">Editar produto</h2>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo-add">
+            <h2 id="modal-titulo-add" class="sr-only">Adicionar produto</h2>
 
             <button type="button" class="modal-fechar" id="fechar-modal" aria-label="Fechar"><svg
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
@@ -89,10 +91,10 @@
                         d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" />
                 </svg></button>
 
-            <form class="modal-form">
+            <form class="modal-form" id="form-add">
                 <div class="modal-topo">
                     <label class="foto">
-                        <span class="foto-preview" id="foto-preview">
+                        <span class="foto-preview" id="add-foto-preview">
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
                                 fill="none" stroke="#6b5f57" stroke-width="1.5" stroke-linecap="round"
                                 stroke-linejoin="round">
@@ -104,30 +106,32 @@
                             </svg>
                         </span>
                         <span class="foto-texto">Adicionar Foto</span>
-                        <input type="file" id="input-foto" accept="image/*" hidden>
+                        <input type="file" id="add-input-foto" accept="image/*" hidden>
                     </label>
 
                     <div class="campos">
-                        <input type="text" placeholder="Nome do produto">
-                        <input type="text" placeholder="Categoria do produto">
-                        <input type="text" placeholder="Valor">
-                        <input type="text" placeholder="Ingredientes">
+                        <input type="text" id="add-nome" placeholder="Nome do produto">
+                        <input type="text" id="add-categoria" placeholder="Categoria do produto">
+                        <input type="text" id="add-valor" placeholder="Valor">
+                        <input type="text" id="add-ingredientes" placeholder="Ingredientes">
                     </div>
                 </div>
 
-                <textarea placeholder="Descrição" rows="5"></textarea>
+                <textarea id="add-descricao" placeholder="Descrição" rows="5"></textarea>
 
                 <div class="btns-modal">
-                    <button type="button" class="btn-cancelar">Cancelar</button>
-                    <button type="submit" class="btn-salvar">Salvar</button>
+                    <button type="button" class="btn-cancelar-add" id="cancelar-add">Cancelar</button>
+                    <button type="submit" class="btn-salvar">Adicionar produto</button>
                 </div>
             </form>
         </div>
     </div>
 
+    <!-- MODAL EDITAR -->
+
     <div class="modal-overlay" id="modal-editar">
-        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
-            <h2 id="modal-titulo" class="sr-only">Editar produto</h2>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo-editar">
+            <h2 id="modal-titulo-editar" class="sr-only">Editar produto</h2>
 
             <button type="button" class="modal-fechar" id="fechar-modal-editar" aria-label="Fechar"><svg
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
@@ -138,7 +142,7 @@
             <form class="modal-form">
                 <div class="modal-topo">
                     <label class="foto">
-                        <span class="foto-preview" id="foto-preview">
+                        <span class="foto-preview" id="edit-foto-preview">
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
                                 fill="none" stroke="#6b5f57" stroke-width="1.5" stroke-linecap="round"
                                 stroke-linejoin="round">
@@ -150,7 +154,7 @@
                             </svg>
                         </span>
                         <span class="foto-texto">Editar Foto</span>
-                        <input type="file" id="input-foto" accept="image/*" hidden>
+                        <input type="file" id="edit-input-foto" accept="image/*" hidden>
                     </label>
 
                     <div class="campos">
@@ -164,7 +168,7 @@
                 <textarea placeholder="Descrição" rows="5"></textarea>
 
                 <div class="btns-modal">
-                    <button type="submit" class="btn-cancelar">Cancelar</button>
+                    <button type="button" class="btn-cancelar-add" id="cancelar-editar">Cancelar</button>
                     <button type="submit" class="btn-salvar">Salvar edições</button>
                 </div>
             </form>
