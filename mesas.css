@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E8DFD0;
+}
+
+.mesas {
+    display: grid;
+    grid-template-columns: repeat(5, 200px);  
+    justify-content: center;
+    gap: 40px 35px;
+    padding: 40px 20px;
+   
+}
+
+.mesa {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;                              
+    height: 200px;                             
+    background-color: #F7F9E9;
+    border: 1px solid #B10203;
+     border-radius: 12px;
+ img {
+    max-width: 80%;
+    max-height: 80%;
+}
+}
+
+.numero-mesa {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #B10203;
+    color: #F7F9E9;
+    font-size: 14px;
+    font-weight: bold;
+}
