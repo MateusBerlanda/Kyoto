@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f8f5f3;
+}
+
+.produto-container {
+    width: 100%;
+    padding: 20px;
+}
+
+.voltar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: #b10203;
+    border: 2px solid #b10203;
+    border-radius: 30px;
+    padding: 9px 22px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    width: 230px;
+    background-color: #fff;
+
+    svg {
+        height: 15px;
+    }
+}
+
+.produto {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.produto-esquerda {
+    width: 40%;
+}
+
+.produto-imagem {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.quantidade {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.quantidade>button:not(.adicionar) {
+    background: white;
+    border: 1.5px solid #b10203;
+    color: #b10203;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+}
+
+.quantidade>span {
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+}
+
+.quantidade .adicionar {
+    background: #b10203;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 0 24px;
+    height: 44px;
+    min-width: 260px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    transition: background 0.2s;
+}
+
+.quantidade .adicionar:hover {
+    background: #701C27;
+}
+
+.quantidade .adicionar span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.quantidade .adicionar .valor {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.valor {
+    font-weight: bold;
+}
+
+.produto-direita {
+    flex: 1;
+}
+
+.produto-direita h1 {
+    color: #b52a2c;
+    font-size: 40px;
+    margin: 5px 0 20px;
+}
+
+.produto-direita h2 {
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.produto-direita p {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.produto-direita p span {
+    color: #b52a2c;
+}
+
+.produto-direita h3 {
+    font-size: 18px;
+    margin: 15px 0;
+    font-weight: 550;
+}
+
+.acompanhamentos {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 20px;
+}
+
+.acompanhamentos label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 14px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.acompanhamentos input {
+    width: 19px;
+    height: 19px;
+    accent-color: #b10203;
+    cursor: pointer;
+}
+
+textarea {
+    width: 600px;
+    height: 100px;
+    margin-top: 28px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+    font-size: 14px;
+}

@@ -17,9 +17,7 @@
 </head>
 
 <body>
-    <header>
-        <img src="../img/logo-kyoto.png" class="logo" alt="Logo da Loja">
-    </header>
+    <?php include "./view/header-admin.php" ?>
 
     <div class="top-adm">
         <h1>Bem-vindo ao Painel Administrativo</h1>
@@ -174,6 +172,8 @@
             </form>
         </div>
     </div>
+
+    <?php include "./view/footer.php" ?>
 
     <script src="js/admin.js"></script>
 </body>

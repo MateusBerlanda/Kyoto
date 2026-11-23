@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #f8f5f3;
+}
+
+.topbar {
+    padding: 10px 20px;
+
+    h1 {
+        color: #B10203;
+    }
+
+    p {
+        color: #6D635B;
+    }
+}
+
+.pedidos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.pedido {
+    background-color: #F0EBE4;
+    width: 100%;
+    border-radius: 20px;
+    max-width: 600px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    p {
+        color: #6D635B;
+        margin-bottom: 5px;
+    }
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 20px 24px;
+
+    h2 {
+        margin: 0;
+    }
+}
+
+.count {
+    background-color: #FFFFFF;
+    font-weight: bold;
+    padding: 6px 16px;
+    border-radius: 20px;
+}
+
+.aguardandotitle {
+    background-color: #B10203;
+
+    h2 {
+        color: #FFFFFF;
+    }
+
+    span.count {
+        background-color: #FFFFFF;
+        color: #B10203;
+    }
+}
+
+.preparandotitle {
+    background-color: #BC5515;
+
+    h2 {
+        color: #FFFFFF;
+    }
+
+    span.count {
+        background-color: #FFFFFF;
+        color: #BC5515;
+    }
+}
+
+.concluidotitle {
+    background-color: #4C8D6F;
+
+    h2 {
+        color: #FFFFFF;
+    }
+
+    span.count {
+        background-color: #FFFFFF;
+        color: #4C8D6F;
+    }
+}
+
+.box-pedidos {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.top-box {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    h2 {
+        color: #222222;
+        font-size: 1.1rem;
+        margin: 0;
+    }
+}
+
+.aguardando {
+    border-left: 6px solid #B10203;
+}
+
+.preparando {
+    border-left: 6px solid #BC5515;
+}
+
+.concluido {
+    border-left: 6px solid #4C8D6F;
+}
+
+.mesa-horario {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px solid #2222222d;
+    padding-bottom: 10px;
+}
+
+.horario {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    color: #6D635B;
+    background-color: #F3E7D2;
+    border-radius: 20px;
+
+    svg {
+        width: 15px;
+        height: 15px;
+        fill: currentColor;
+    }
+}
+
+.itens-pedidos {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.btns-pedidos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    button {
+        display: flex;
+        padding: 5px 40px;
+        align-items: center;
+        height: 50px;
+        width: 180px;
+        gap: 10px;
+        cursor: pointer;
+        justify-content: center;
+
+        svg {
+            width: 20px;
+        }
+    }
+}
+
+.recusar {
+    background-color: transparent;
+    border: 1px solid #701C27;
+    color: #701C27;
+    fill: #701C27;
+    border-radius: 10px;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: #701C27;
+        color: #fff;
+        fill: #fff;
+    }
+}
+
+.aceitar {
+    background-color: #4C8D6F;
+    color: #fff;
+    fill: #fff;
+    border: none;
+    border-radius: 10px;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: #315242;
+    }
+}
+
+.concluir {
+    background-color: #4C8D6F;
+    color: #fff;
+    fill: #fff;
+    border: none;
+    border-radius: 10px;
+    transition: 0.2s;
+    padding: 5px 40px;
+    height: 50px;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+
+    &:hover {
+        background-color: #315242;
+    }
+
+    svg {
+        width: 20px;
+    }
+}
+
+.btn-concluido {
+    background-color: #E8F0E9;
+    color: #365F4C;
+    fill: #365F4C;
+    border: none;
+    border-radius: 10px;
+    transition: 0.2s;
+    padding: 5px 40px;
+    height: 50px;
+    width: 100%;
+    cursor:  not-allowed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+
+    svg {
+        width: 20px;
+    }
+}
