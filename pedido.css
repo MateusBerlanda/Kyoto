@@ -20,7 +20,7 @@ nav a {
   background: white;
   color: #b00000;
   padding: 4px 14px;
- border-radius: 20px;
+  border-radius: 20px;
   font-size: 12px;
 }
 
@@ -30,19 +30,19 @@ main {
 }
 
 .voltar {
-    display: flex;
-    background: #fbf7f4;
-    color: #b00000;
-    padding: 10px 18px;
-    border-radius: 20px;
-    font-size: 13px;
-    text-decoration: none;
-    align-items: center;
-    justify-content: center;
-    width: 110px;
-    height: 40px;
-    margin-bottom: 15px;
-    border: 1px solid #b00000;
+  display: flex;
+  background: #fbf7f4;
+  color: #b00000;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 40px;
+  margin-bottom: 15px;
+  border: 1px solid #b00000;
 }
 
 h1 {
@@ -60,22 +60,24 @@ h1 {
   padding: 30px;
   margin-top: 12px;
 
-img{
-  width: 140px;
-  object-fit: cover;
-  border-radius: 10px;
-}
+  img {
+    width: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
 }
 
 .info {
   flex: 1;
- h3 {
-  color: #c1272d;
-  font-size: 28px;
-}
- p {
-  font-size: 20px;
-}
+
+  h3 {
+    color: #c1272d;
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 20px;
+  }
 }
 
 .valor {
@@ -91,8 +93,14 @@ img{
   border-radius: 20px;
 }
 
-.preparando { background: #c4551a; }
+.preparando {
+  background: #c4551a;
+}
 
-.cancelado  { background: #b00000; }
+.cancelado {
+  background: #b00000;
+}
 
-.entregue   { background: #4a8c6a; }
+.entregue {
+  background: #4a8c6a;
+}

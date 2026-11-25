@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,19 +9,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/cadastro.css">
+  <link rel="stylesheet" href="css/header-admin.css">
+  <link rel="stylesheet" href="css/footer.css">
 </head>
+
 <body>
-
-  
-  <div class="fundo" aria-hidden="true"></div>
-
-  <header class="topo">
-    
-    <a class="logo" href="#" aria-label="Kyoto – página inicial">
-      <img src="imagens/logo.png" alt="Kyoto">
-    </a>
-  </header>
-
+  <?php include "./view/header-admin.php" ?>
   <main>
     <h1 class="titulo">Cadastro de administração</h1>
 
@@ -29,14 +23,14 @@
       <div class="linha">
         <div class="campo">
           <label for="nome">Nome</label>
-          <input id="nome" name="nome" type="text" placeholder="Digite seu nome" autocomplete="name" minlength="3" required>
+          <input id="nome" name="nome" type="text" placeholder="Digite seu nome" autocomplete="name" minlength="3"
+            required>
         </div>
         <div class="campo">
           <label for="setor">Setor</label>
           <select id="setor" name="setor" required>
             <option value="" disabled selected>Selecione seu setor</option>
             <option value="Mesa">Mesa</option>
-            <option value="caixa">Caixa</option>
             <option value="cozinha">Cozinha</option>
             <option value="administracao">Administração</option>
           </select>
@@ -51,8 +45,18 @@
       <div class="campo">
         <label for="senha">Senha:</label>
         <div class="senha">
-          <input id="senha" name="senha" type="password" placeholder="Digite sua senha" autocomplete="new-password" minlength="8" required>
-          
+          <input id="senha" name="senha" type="password" placeholder="Digite sua senha" autocomplete="new-password"
+            minlength="8" required>
+
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="senha">Confirme sua senha:</label>
+        <div class="senha">
+          <input id="senha" name="senha" type="password" placeholder="Confirme sua senha" autocomplete="new-password"
+            minlength="8" required>
+
         </div>
       </div>
 
@@ -60,6 +64,7 @@
       <button class="btn" type="submit">Cadastrar</button>
     </form>
   </main>
-
+  <?php include "./view/footer.php" ?>
 </body>
+
 </html>

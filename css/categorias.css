@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f8f5f3;
+}
+
+.top-adm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+
+    h1 {
+        color: #701C27;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    p {
+        color: #303030c9;
+        font-size: 18px;
+    }
+}
+
+.itens-top{
+    display: flex;
+    flex-direction: column;
+}
+
+.btns-top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 14px;
+}
+
+.btn-novo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #701C27;
+    height: 50px;
+    width: 200px;
+    padding: 0 18px;
+    background-color: #fff;
+    color: #701c27be;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    svg {
+        width: 16px;
+        height: 16px;
+        color: #701c27be;
+    }
+
+    &:hover {
+        background-color: #701C27;
+        color: #fff;
+
+        svg {
+            color: #fff;
+        }
+    }
+}
+
+.categorias {
+    display: grid;
+    padding: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(640px, 1fr));
+    justify-items: center;
+}
+
+.categoria {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    background-color: #f9f2ed;
+    border: 0.5px solid #701c27;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px 30px;
+    margin-top: 30px;
+    width: 500px;
+}
+
+.info-produto {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+}
+
+.textos-produto {
+    text-align: center;
+
+    h2 {
+        color: #701C27;
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0;
+    }
+}
+
+.btns-produto {
+    display: flex;
+    gap: 32px;
+}
+
+.btn-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    background-color: #701C27;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+
+    svg {
+        width: 28px;
+        height: 28px;
+        color: #fff;
+        fill: #fff;
+    }
+
+    &:hover {
+        background-color: #8a2432;
+        transform: scale(1.05);
+    }
+}
+
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+/* MODAL */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    z-index: 1000;
+}
+
+.aberto {
+    display: flex;
+}
+
+.modal {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    max-height: 90vh;
+    background-color: #E2D3C4;
+    border-radius: 28px;
+    padding: 56px 36px 36px;
+    -webkit-animation: fade-in-fwd 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in-fwd 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    border: 2px solid #701C27;
+}
+
+@-webkit-keyframes fade-in-fwd {
+    0% {
+        -webkit-transform: translateZ(-80px);
+        transform: translateZ(-80px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-fwd {
+    0% {
+        -webkit-transform: translateZ(-80px);
+        transform: translateZ(-80px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+.modal-fechar {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #B00000;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+
+    svg {
+        width: 20px;
+        height: 20px;
+        fill: #fff;
+    }
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.modal-topo {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.foto-preview {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #F8EFE8;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #701C27;
+
+    svg {
+        width: 48px;
+        height: 48px;
+        color: #927F72;
+        pointer-events: none;
+    }
+}
+
+.foto-texto {
+    color: #6b5f57;
+    font-size: 18px;
+}
+
+.campos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.modal input[type="text"],
+.modal textarea {
+    width: 100%;
+    background-color: #F8EFE8;
+    border: 1px solid #701C27;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 18px;
+    color: #4a3f39;
+    box-sizing: border-box;
+
+    &::placeholder {
+        color: #7d7068;
+    }
+
+    &:focus {
+        outline: 2px solid #701C27;
+    }
+}
+
+.btns-modal {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.btn-cancelar-add {
+    background-color: #B00000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: #8a0000;
+    }
+}
+
+.btn-salvar {
+    background-color: #4C8D6F;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: #355747;
+    }
+}
