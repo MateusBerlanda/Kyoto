@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #E8DFD0;
+    background-color: #fbf7f4;
 }
 
 .mesas {
@@ -24,7 +24,7 @@ body {
     justify-content: center;
     width: 200px;                              
     height: 200px;                             
-    background-color: #F7F9E9;
+    background-color: #fff7ec;
     border: 1px solid #B10203;
      border-radius: 12px;
  img {
