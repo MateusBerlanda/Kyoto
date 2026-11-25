@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #fbf7f4;
+}
+
+button {
+    height: 40px;
+    width: 100px;
+    border-radius: 100px;
+    background-color: #B10203;
+    color: white;
+    margin: 30px;
+    border: none;
+}
+
+.seta {
+    display: flex;
+    height: 50px;
+    font-size: 40px;
+    gap: 20px;
+    padding-left: 200px;
+}
+
+.seta2 {
+    display: flex;
+    height: 50px;
+    font-size: 40px;
+    gap: 20px;
+    padding-left: 290px;
+}
+
+.man {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+.ss {
+    height: 150px;
+}
+
+.california {
+    border: solid 2px #B10203;
+    margin: 20px;
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+
+    .t1 {
+        padding: 20px;
+
+        h1 {
+            color: #C12627;
+            padding: 2px;
+        }
+
+        h3 {
+            padding: 2px;
+        }
+    }
+}
+
+.sashimi {
+    border: solid 2px #B10203;
+    margin: 20px;
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+
+    .t2 {
+        padding: 20px;
+
+        h1 {
+            color: #C12627;
+            padding: 2px;
+        }
+
+        h3 {
+            padding: 2px;
+        }
+    }
+}
+
+.hata {
+    border: solid 2px #B10203;
+    margin: 20px;
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+
+    .t3 {
+        padding: 20px;
+
+        h1 {
+            color: #C12627;
+            padding: 2px;
+        }
+
+        h3 {
+            padding: 2px;
+        }
+    }
+}
+
+.pedido {
+    width: 25%;
+    height: 70%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    margin-top: 18px;
+   
+
+    .pedido-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border: solid 2px #B10203;
+        align-items: center;
+        padding-top: 20px;
+        gap: 50px;
+        font-size: 20px;
+        border-radius: 20px;
+
+        h1 {
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .desconto {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        .total {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        hr {
+            display: block;
+            height: 1px;
+            width: 80%;
+            background-color: #434343;
+            filter: opacity(60%); 
+            border: none;
+            margin: 16px 0;
+        }
+
+        .valor-pedido{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            
+           h3{
+            
+            width: 100%;
+            padding-left: 60px;
+            padding-right: 200px;
+           }
+
+           h1{
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            color: #B10203;
+            padding-right: 50px;
+           }
+        }
+
+        .fn{
+            height: 50px;
+            width: 70%;
+            font-size: 25px;
+        }
+    }
+}
+
+.itens {
+    width: 70%;
+}
